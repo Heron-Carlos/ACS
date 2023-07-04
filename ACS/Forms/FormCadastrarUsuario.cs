@@ -1,0 +1,288 @@
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ACS.Forms
+{
+    public partial class FormCadastrarUsuario : Form
+    {
+        string data_source = "server=localhost;database=acs;uid=root;pwd=heron362;port=3306";
+        public FormCadastrarUsuario()
+        {
+            InitializeComponent();
+        }
+
+        private void AdicionarUsuario()
+        {
+            if (comboBox2.Text != "Usuário Padrão")
+            {
+                try
+                {
+                    MySqlConnection Conexao;
+                    Conexao = new MySqlConnection(data_source);
+                    string sql = "INSERT INTO login (usuario, senha, admin)VALUES('" + textBox1.Text + "', '" + textBox2.Text + "', 1)";
+                    MySqlCommand comando = new MySqlCommand(sql, Conexao);
+                    Conexao.Open();
+                    comando.ExecuteReader();
+                    Conexao.Close();
+                    MessageBox.Show("Cadastro realizado com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+
+                }
+            }
+            else
+            {
+                try
+                {
+                    MySqlConnection Conexao;
+                    Conexao = new MySqlConnection(data_source);
+                    string sql = "INSERT INTO login (usuario, senha, admin)VALUES('" + textBox1.Text + "', '" + textBox2.Text + "', 0)";
+                    MySqlCommand comando = new MySqlCommand(sql, Conexao);
+                    Conexao.Open();
+                    comando.ExecuteReader();
+                    Conexao.Close();
+                    MessageBox.Show("Cadastro realizado com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+
+                }
+            }
+
+        }
+
+        private void Pesquisar()
+        {
+            try
+            {
+                MySqlConnection Cn;
+                Cn = new MySqlConnection(data_source);
+                Cn.Open();
+                var exibirVagas = "SELECT * FROM login WHERE usuario = '" + textBox3.Text + "' ";
+                using (MySqlDataAdapter da = new MySqlDataAdapter(exibirVagas, Cn))
+                {
+                    using (DataTable dt = new DataTable())
+                    {
+                        da.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                    }
+                }
+                Cn.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void AlterarUsuario()
+        {
+            if (textBox3.Text != "")
+            {
+                try
+                {
+                    MySqlConnection conexao = new MySqlConnection(data_source);
+                    string sql = "UPDATE login SET usuario = '" + textBox5.Text + "' WHERE usuario = '" + textBox3.Text + "'";
+                    MySqlCommand comando = new MySqlCommand(sql, conexao);
+                    conexao.Open();
+                    comando.ExecuteReader();
+                    conexao.Close();
+                    MessageBox.Show("Nome de usuário atualizado!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Digite o nome do usuário na barra de pesquisa que deseja alterar!");
+            }
+            
+        }
+
+        private void AlterarSenha()
+        {
+            if (textBox3.Text != "")
+            {
+                try
+                {
+                    MySqlConnection conexao = new MySqlConnection(data_source);
+                    string sql = "UPDATE login SET senha = '" + textBox4.Text + "' WHERE usuario = '" + textBox3.Text + "'";
+                    MySqlCommand comando = new MySqlCommand(sql, conexao);
+                    conexao.Open();
+                    comando.ExecuteReader();
+                    conexao.Close();
+                    MessageBox.Show("Senha atualizada!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Digite o nome do usuário na barra de pesquisa que deseja alterar!");
+            }
+        }
+
+        private void AlterarTipo()
+        {
+            if (comboBox1.Text != "Usuário Padrão")
+            {
+                if (textBox3.Text != "")
+                {
+                    try
+                    {
+                        MySqlConnection conexao = new MySqlConnection(data_source);
+                        string sql = "UPDATE login SET admin = 1 WHERE usuario = '" + textBox3.Text + "'";
+                        MySqlCommand comando = new MySqlCommand(sql, conexao);
+                        conexao.Open();
+                        comando.ExecuteReader();
+                        conexao.Close();
+                        MessageBox.Show("Tipo de usuário atualizado!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                        throw;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Digite o nome do usuário na barra de pesquisa que deseja alterar!");
+                }
+            }
+            else
+            {
+                if (textBox3.Text != "")
+                {
+                    try
+                    {
+                        MySqlConnection conexao = new MySqlConnection(data_source);
+                        string sql = "UPDATE login SET admin = 0 WHERE usuario = '" + textBox3.Text + "'";
+                        MySqlCommand comando = new MySqlCommand(sql, conexao);
+                        conexao.Open();
+                        comando.ExecuteReader();
+                        conexao.Close();
+                        MessageBox.Show("Tipo de usuário atualizado!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                        throw;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Digite o nome do usuário na barra de pesquisa que deseja alterar!");
+                }
+            }
+        }
+
+        private void ExcluirUsuario()
+        {
+            if (textBox3.Text != "")
+            {
+                try
+                {
+                    MySqlConnection conexao = new MySqlConnection(data_source);
+                    string sql = "DELETE FROM login WHERE usuario = '" + textBox3.Text + "'";
+                    MySqlCommand comando = new MySqlCommand(sql, conexao);
+                    conexao.Open();
+                    comando.ExecuteReader();
+                    conexao.Close();
+                    MessageBox.Show("Usuário excluído com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Digite o nome do usuário na barra de pesquisa que deseja alterar!");
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && comboBox2.Text != "")
+            {
+                this.AdicionarUsuario();
+            }
+            else
+            {
+                MessageBox.Show("Complete todos os campos!");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text != "")
+            {
+                this.Pesquisar();
+            }
+            else
+            {
+                MessageBox.Show("Digite o nome do usuário!");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (textBox5.Text != "")
+            {
+                this.AlterarUsuario();
+            }
+            else
+            {
+                MessageBox.Show("Digite o novo Nome do usuário!");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox4.Text != "")
+            {
+                this.AlterarSenha();
+            }
+            else
+            {
+                MessageBox.Show("Digite a nova senha do usuário!");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text != "")
+            {
+                this.AlterarTipo();
+            }
+            else
+            {
+                MessageBox.Show("Selecione o novo tipo de usuário!");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.ExcluirUsuario();
+        }
+    }
+}

@@ -1,0 +1,262 @@
+﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+
+namespace ACS.Forms.SubForms.Estoque
+{
+    public partial class FormAlterarItem : Form
+    {
+        string data_source = "server=localhost;database=acs;uid=root;pwd=heron362;port=3306";
+
+        public FormAlterarItem()
+        {
+            InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string item = Convert.ToString(comboBox1.Text);
+            if (item != "")
+            {
+                try
+                {
+                    if (textBox1.Text != "")
+                    {
+                        var exibirVagas = "";
+                        if (item == "Codigo")
+                        {
+                            exibirVagas = " SELECT * FROM Estoque WHERE CodigoItem = '" + textBox1.Text + "' ";
+                        }
+                        if (item == "Marca")
+                        {
+                            exibirVagas = "SELECT * FROM Estoque WHERE Marca = '" + textBox1.Text + "'";
+                        }
+                        if (item == "Descrição")
+                        {
+                            exibirVagas = "SELECT * FROM Estoque WHERE Descricao = '" + textBox1.Text + "'";
+                        }
+                        if (item == "Local")
+                        {
+                            exibirVagas = "SELECT * FROM Estoque WHERE Localizacao = '" + textBox1.Text + "'";
+                        }
+                        if (item == "Tipo")
+                        {
+                            exibirVagas = "SELECT * FROM Estoque WHERE Tipo = '" + textBox1.Text + "'";
+                        }
+                        if (item == "Item")
+                        {
+                            exibirVagas = "SELECT * FROM Estoque WHERE Item = '" + textBox1.Text + "'";
+                        }
+                        MySqlConnection Cn;
+
+                        Cn = new MySqlConnection(data_source);
+                        Cn.Open();
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(exibirVagas, Cn))
+                        {
+                            using (DataTable dt = new DataTable())
+                            {
+                                da.Fill(dt);
+                                dataGridView1.DataSource = dt;
+                            }
+                        }
+                        Cn.Close();
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
+                        textBox5.Text = "";
+                    }
+                    else MessageBox.Show("Preencha todos os campos para pesquisa detalhada!");
+                }
+
+
+
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+            else MessageBox.Show("Preencha todos os campos para pesquisa detalhada!");
+
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
+            {
+                MessageBox.Show("Você não pode selecionar os dois tipos de código do Item!");
+            }
+            else
+            {
+                if (comboBox2.Text != "" && textBox2.Text != "" && textBox3.Text != "")
+                {
+                    if (textBox3.Text == "")
+                    {
+                        MySqlConnection Conexao;
+                        string item = Convert.ToString(comboBox2.Text);
+                        string sql = "";
+                        if (item == "Codigo")
+                        {
+                            sql = " SELECT * FROM Estoque WHERE CodigoItem = '" + textBox1.Text + "' ";
+                        }
+                        if (item == "Marca")
+                        {
+                            sql = "UPDATE Estoque SET Marca = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+                        }
+                        if (item == "Descrição")
+                        {
+                            sql = "UPDATE Estoque SET Descricao = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+                        }
+                        if (item == "Local")
+                        {
+                            sql = "UPDATE Estoque SET Localizacao = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+                        }
+                        if (item == "Tipo")
+                        {
+                            sql = "UPDATE Estoque SET Tipo = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+                        }
+                        if (item == "Item")
+                        {
+                            sql = "UPDATE Estoque SET Item = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+                        }
+                        if (item == "Status")
+                        {
+                            sql = "UPDATE Estoque SET Stts = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+                        }
+                        try
+                        {
+
+                            Conexao = new MySqlConnection(data_source);
+                            MySqlCommand comando = new MySqlCommand(sql, Conexao);
+                            Conexao.Open();
+                            comando.ExecuteReader();
+                            MessageBox.Show("Atualização concluida");
+
+
+                            Conexao.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Certifique-se que todos os campos estão prenchidos!");
+
+                        }
+                    }
+                    else
+                    {
+                        MySqlConnection Conexao;
+                        string item = Convert.ToString(comboBox2.Text);
+                        string sql = "";
+                        if (item == "Codigo")
+                        {
+                            sql = " SELECT * FROM Estoque WHERE CodigoItem = '" + textBox1.Text + "' ";
+                        }
+                        if (item == "Marca")
+                        {
+                            sql = "UPDATE Estoque SET Marca = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
+                        }
+                        if (item == "Descrição")
+                        {
+                            sql = "UPDATE Estoque SET Descricao = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
+                        }
+                        if (item == "Local")
+                        {
+                            sql = "UPDATE Estoque SET Localizacao = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
+                        }
+                        if (item == "Tipo")
+                        {
+                            sql = "UPDATE Estoque SET Tipo = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
+                        }
+                        if (item == "Item")
+                        {
+                            sql = "UPDATE Estoque SET Item = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
+                        }
+                        if (item == "Status")
+                        {
+                            sql = "UPDATE Estoque SET Stts = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
+                        }
+                        try
+                        {
+
+                            Conexao = new MySqlConnection(data_source);
+                            MySqlCommand comando = new MySqlCommand(sql, Conexao);
+                            Conexao.Open();
+                            comando.ExecuteReader();
+                            MessageBox.Show("Atualização concluida");
+
+
+                            Conexao.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Certifique-se que todos os campos estão prenchidos!");
+
+                        }
+                    }
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                    comboBox2.Text = "";
+                }
+                else MessageBox.Show("Certifique-se que todos os campos estão prenchidos!");
+            }
+
+
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MySqlConnection Cn;
+                Cn = new MySqlConnection(data_source);
+                Cn.Open();
+                var exibirVagas = "SELECT * FROM Estoque";
+                using (MySqlDataAdapter da = new MySqlDataAdapter(exibirVagas, Cn))
+                {
+                    using (DataTable dt = new DataTable())
+                    {
+                        da.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                    }
+                }
+                Cn.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormAlterarItem_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
