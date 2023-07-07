@@ -111,7 +111,7 @@ namespace ACS.Forms
             {
                 MessageBox.Show("Digite o nome do usuário na barra de pesquisa que deseja alterar!");
             }
-            
+
         }
 
         private void AlterarSenha()

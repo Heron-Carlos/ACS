@@ -52,7 +52,9 @@
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -60,7 +62,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(378, 232);
+            label1.Location = new Point(299, 123);
             label1.Name = "label1";
             label1.Size = new Size(52, 19);
             label1.TabIndex = 9;
@@ -71,7 +73,7 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(378, 177);
+            label2.Location = new Point(299, 80);
             label2.Name = "label2";
             label2.Size = new Size(63, 19);
             label2.TabIndex = 10;
@@ -80,17 +82,17 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(447, 173);
+            textBox1.Location = new Point(382, 76);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(229, 23);
+            textBox1.Size = new Size(264, 23);
             textBox1.TabIndex = 25;
             // 
             // textBox2
             // 
             textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(447, 228);
+            textBox2.Location = new Point(382, 119);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(229, 23);
+            textBox2.Size = new Size(264, 23);
             textBox2.TabIndex = 26;
             // 
             // label3
@@ -98,7 +100,7 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(420, 92);
+            label3.Location = new Point(363, 12);
             label3.Name = "label3";
             label3.Size = new Size(323, 33);
             label3.TabIndex = 27;
@@ -108,7 +110,7 @@
             // 
             dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(340, 516);
+            dataGridView1.Location = new Point(314, 401);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(417, 231);
@@ -119,7 +121,7 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(411, 413);
+            label4.Location = new Point(363, 299);
             label4.Name = "label4";
             label4.Size = new Size(302, 33);
             label4.TabIndex = 29;
@@ -130,7 +132,7 @@
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(342, 490);
+            label5.Location = new Point(314, 376);
             label5.Name = "label5";
             label5.Size = new Size(63, 19);
             label5.TabIndex = 30;
@@ -139,7 +141,7 @@
             // textBox3
             // 
             textBox3.Anchor = AnchorStyles.None;
-            textBox3.Location = new Point(411, 486);
+            textBox3.Location = new Point(394, 372);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(229, 23);
             textBox3.TabIndex = 31;
@@ -147,9 +149,9 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.None;
-            button1.Location = new Point(646, 486);
+            button1.Location = new Point(629, 371);
             button1.Name = "button1";
-            button1.Size = new Size(111, 23);
+            button1.Size = new Size(92, 23);
             button1.TabIndex = 32;
             button1.Text = "Pesquisar";
             button1.UseVisualStyleBackColor = true;
@@ -160,7 +162,7 @@
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(338, 814);
+            label6.Location = new Point(299, 702);
             label6.Name = "label6";
             label6.Size = new Size(89, 19);
             label6.TabIndex = 33;
@@ -169,7 +171,7 @@
             // textBox4
             // 
             textBox4.Anchor = AnchorStyles.None;
-            textBox4.Location = new Point(447, 810);
+            textBox4.Location = new Point(417, 698);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(194, 23);
             textBox4.TabIndex = 34;
@@ -177,7 +179,7 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.None;
-            button2.Location = new Point(646, 809);
+            button2.Location = new Point(629, 697);
             button2.Name = "button2";
             button2.Size = new Size(111, 23);
             button2.TabIndex = 35;
@@ -190,7 +192,7 @@
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(337, 853);
+            label7.Location = new Point(299, 748);
             label7.Name = "label7";
             label7.Size = new Size(101, 19);
             label7.TabIndex = 36;
@@ -201,7 +203,7 @@
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(375, 285);
+            label8.Location = new Point(299, 158);
             label8.Name = "label8";
             label8.Size = new Size(101, 19);
             label8.TabIndex = 37;
@@ -212,9 +214,9 @@
             comboBox2.Anchor = AnchorStyles.None;
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Administrador", "Usuário Padrão" });
-            comboBox2.Location = new Point(482, 281);
+            comboBox2.Location = new Point(417, 158);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(194, 23);
+            comboBox2.Size = new Size(229, 23);
             comboBox2.TabIndex = 38;
             // 
             // comboBox1
@@ -222,7 +224,7 @@
             comboBox1.Anchor = AnchorStyles.None;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Administrador", "Usuário Padrão" });
-            comboBox1.Location = new Point(447, 849);
+            comboBox1.Location = new Point(417, 748);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(194, 23);
             comboBox1.TabIndex = 39;
@@ -230,7 +232,7 @@
             // button3
             // 
             button3.Anchor = AnchorStyles.None;
-            button3.Location = new Point(646, 848);
+            button3.Location = new Point(629, 748);
             button3.Name = "button3";
             button3.Size = new Size(111, 23);
             button3.TabIndex = 40;
@@ -243,7 +245,7 @@
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(337, 771);
+            label9.Location = new Point(299, 653);
             label9.Name = "label9";
             label9.Size = new Size(109, 19);
             label9.TabIndex = 41;
@@ -252,7 +254,7 @@
             // textBox5
             // 
             textBox5.Anchor = AnchorStyles.None;
-            textBox5.Location = new Point(447, 771);
+            textBox5.Location = new Point(417, 652);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(194, 23);
             textBox5.TabIndex = 42;
@@ -260,7 +262,7 @@
             // button4
             // 
             button4.Anchor = AnchorStyles.None;
-            button4.Location = new Point(647, 771);
+            button4.Location = new Point(629, 651);
             button4.Name = "button4";
             button4.Size = new Size(111, 23);
             button4.TabIndex = 43;
@@ -272,7 +274,7 @@
             // 
             button5.Anchor = AnchorStyles.None;
             button5.ForeColor = Color.Red;
-            button5.Location = new Point(482, 902);
+            button5.Location = new Point(479, 800);
             button5.Name = "button5";
             button5.Size = new Size(111, 23);
             button5.TabIndex = 44;
@@ -283,7 +285,7 @@
             // button6
             // 
             button6.Anchor = AnchorStyles.None;
-            button6.Location = new Point(501, 328);
+            button6.Location = new Point(460, 209);
             button6.Name = "button6";
             button6.Size = new Size(111, 23);
             button6.TabIndex = 45;
@@ -291,40 +293,51 @@
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
             // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.None;
+            panel1.BackColor = SystemColors.ControlDark;
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(comboBox2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(button6);
+            panel1.Controls.Add(textBox5);
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(label7);
+            panel1.Location = new Point(3, 82);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1041, 849);
+            panel1.TabIndex = 46;
+            // 
             // FormCadastrarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1056, 1026);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(textBox5);
-            Controls.Add(label9);
-            Controls.Add(button3);
-            Controls.Add(comboBox1);
-            Controls.Add(comboBox2);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(button2);
-            Controls.Add(textBox4);
-            Controls.Add(label6);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(dataGridView1);
-            Controls.Add(label3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCadastrarUsuario";
             Text = "Alterações Usuário";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -352,5 +365,6 @@
         private Button button4;
         private Button button5;
         private Button button6;
+        private Panel panel1;
     }
 }

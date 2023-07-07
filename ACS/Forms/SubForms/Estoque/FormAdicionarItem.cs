@@ -87,13 +87,20 @@ namespace ACS.Forms.SubForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.textBoxVazias();
-            if (textBoxVazias()) MessageBox.Show("Preencha todas as informações");
-            else
+            //this.textBoxVazias();
+            //if (textBoxVazias()) MessageBox.Show("Preencha todas as informações");
+            //else
+            //{
+            //    this.Cadastrar();
+            //}
+            if (textBox1.Text != "" && textBox2.Text !="" && textBox3.Text !="" && textBox4.Text != "" && textBox5.Text != "" && comboBox2.Text !="" && comboBox3.Text !="" && comboBox4.Text != "")
             {
                 this.Cadastrar();
             }
-
+            else
+            {
+                MessageBox.Show("Preencha todas as informações");
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

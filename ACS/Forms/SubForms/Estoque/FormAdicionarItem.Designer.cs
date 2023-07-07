@@ -49,6 +49,8 @@
             label10 = new Label();
             textBox1 = new TextBox();
             label11 = new Label();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -56,7 +58,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(41, 46);
+            label1.Location = new Point(667, 80);
             label1.Name = "label1";
             label1.Size = new Size(58, 19);
             label1.TabIndex = 0;
@@ -67,7 +69,7 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(429, 46);
+            label2.Location = new Point(50, 177);
             label2.Name = "label2";
             label2.Size = new Size(42, 19);
             label2.TabIndex = 2;
@@ -78,7 +80,7 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(41, 124);
+            label3.Location = new Point(43, 231);
             label3.Name = "label3";
             label3.Size = new Size(77, 19);
             label3.TabIndex = 4;
@@ -87,7 +89,7 @@
             // textBox2
             // 
             textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(134, 124);
+            textBox2.Location = new Point(143, 227);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(414, 23);
             textBox2.TabIndex = 5;
@@ -98,7 +100,7 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(734, 124);
+            label4.Location = new Point(743, 173);
             label4.Name = "label4";
             label4.Size = new Size(89, 19);
             label4.TabIndex = 6;
@@ -107,7 +109,7 @@
             // textBox3
             // 
             textBox3.Anchor = AnchorStyles.None;
-            textBox3.Location = new Point(850, 120);
+            textBox3.Location = new Point(855, 173);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(81, 23);
             textBox3.TabIndex = 7;
@@ -118,7 +120,7 @@
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(41, 216);
+            label5.Location = new Point(43, 290);
             label5.Name = "label5";
             label5.Size = new Size(54, 19);
             label5.TabIndex = 8;
@@ -127,7 +129,7 @@
             // textBox4
             // 
             textBox4.Anchor = AnchorStyles.None;
-            textBox4.Location = new Point(134, 212);
+            textBox4.Location = new Point(143, 286);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(414, 23);
             textBox4.TabIndex = 9;
@@ -138,7 +140,7 @@
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(734, 216);
+            label6.Location = new Point(755, 231);
             label6.Name = "label6";
             label6.Size = new Size(41, 19);
             label6.TabIndex = 10;
@@ -149,7 +151,7 @@
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(45, 299);
+            label7.Location = new Point(50, 349);
             label7.Name = "label7";
             label7.Size = new Size(47, 19);
             label7.TabIndex = 12;
@@ -158,7 +160,7 @@
             // textBox5
             // 
             textBox5.Anchor = AnchorStyles.None;
-            textBox5.Location = new Point(134, 295);
+            textBox5.Location = new Point(143, 349);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(414, 23);
             textBox5.TabIndex = 13;
@@ -169,7 +171,7 @@
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(734, 299);
+            label8.Location = new Point(743, 290);
             label8.Name = "label8";
             label8.Size = new Size(53, 19);
             label8.TabIndex = 14;
@@ -180,7 +182,7 @@
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(45, 412);
+            label9.Location = new Point(704, 345);
             label9.Name = "label9";
             label9.Size = new Size(92, 19);
             label9.TabIndex = 16;
@@ -189,7 +191,7 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.None;
-            button1.Location = new Point(814, 407);
+            button1.Location = new Point(483, 460);
             button1.Name = "button1";
             button1.Size = new Size(117, 23);
             button1.TabIndex = 18;
@@ -202,7 +204,7 @@
             comboBox2.Anchor = AnchorStyles.None;
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Máquina", "Ferramentas", "Doméstico", "Escritório" });
-            comboBox2.Location = new Point(810, 212);
+            comboBox2.Location = new Point(815, 227);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(121, 23);
             comboBox2.TabIndex = 20;
@@ -213,7 +215,7 @@
             comboBox3.Anchor = AnchorStyles.None;
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "Dentro de obra", "Fora de obra" });
-            comboBox3.Location = new Point(810, 299);
+            comboBox3.Location = new Point(815, 286);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(121, 23);
             comboBox3.TabIndex = 21;
@@ -224,7 +226,7 @@
             comboBox4.Anchor = AnchorStyles.None;
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange(new object[] { "Comprado", "Alugado" });
-            comboBox4.Location = new Point(143, 408);
+            comboBox4.Location = new Point(815, 345);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(121, 23);
             comboBox4.TabIndex = 22;
@@ -234,7 +236,7 @@
             // 
             label10.Anchor = AnchorStyles.None;
             label10.AutoSize = true;
-            label10.Location = new Point(105, 50);
+            label10.Location = new Point(731, 84);
             label10.Name = "label10";
             label10.Size = new Size(166, 15);
             label10.TabIndex = 23;
@@ -243,7 +245,7 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(477, 46);
+            textBox1.Location = new Point(143, 173);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(229, 23);
             textBox1.TabIndex = 24;
@@ -255,43 +257,54 @@
             label11.AutoSize = true;
             label11.Font = new Font("Calibri", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             label11.ForeColor = Color.DarkSlateGray;
-            label11.Location = new Point(410, 0);
+            label11.Location = new Point(421, 34);
             label11.Name = "label11";
             label11.Size = new Size(212, 33);
             label11.TabIndex = 25;
             label11.Text = "ADICIONAR ITEM ";
             // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.None;
+            panel1.BackColor = SystemColors.ControlDark;
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(label11);
+            panel1.Controls.Add(comboBox4);
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(comboBox3);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(comboBox2);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(textBox5);
+            panel1.Location = new Point(89, 56);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1042, 561);
+            panel1.TabIndex = 26;
+            // 
             // FormAdicionarItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(995, 474);
-            Controls.Add(label11);
-            Controls.Add(textBox1);
-            Controls.Add(label10);
-            Controls.Add(comboBox4);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(button1);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(textBox5);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(textBox4);
-            Controls.Add(label5);
-            Controls.Add(textBox3);
-            Controls.Add(label4);
-            Controls.Add(textBox2);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            ClientSize = new Size(1190, 644);
+            Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormAdicionarItem";
             Text = "FormAdicionarItem";
             Load += FormAdicionarItem_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -316,5 +329,6 @@
         private Label label10;
         private TextBox textBox1;
         private Label label11;
+        private Panel panel1;
     }
 }

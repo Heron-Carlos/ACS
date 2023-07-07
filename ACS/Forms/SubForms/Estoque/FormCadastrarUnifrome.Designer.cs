@@ -54,7 +54,9 @@
             label10 = new Label();
             comboBox8 = new ComboBox();
             label11 = new Label();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label3
@@ -62,7 +64,7 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(12, 54);
+            label3.Location = new Point(41, 84);
             label3.Name = "label3";
             label3.Size = new Size(41, 19);
             label3.TabIndex = 5;
@@ -73,7 +75,7 @@
             comboBox1.Anchor = AnchorStyles.None;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Jaleco", "Calça", "Botina" });
-            comboBox1.Location = new Point(59, 54);
+            comboBox1.Location = new Point(88, 80);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 6;
@@ -83,7 +85,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(191, 58);
+            label1.Location = new Point(244, 84);
             label1.Name = "label1";
             label1.Size = new Size(72, 19);
             label1.TabIndex = 7;
@@ -94,7 +96,7 @@
             comboBox2.Anchor = AnchorStyles.None;
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "P", "M", "G", "GG", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45" });
-            comboBox2.Location = new Point(272, 54);
+            comboBox2.Location = new Point(322, 80);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(121, 23);
             comboBox2.TabIndex = 8;
@@ -104,7 +106,7 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(412, 58);
+            label2.Location = new Point(488, 84);
             label2.Name = "label2";
             label2.Size = new Size(53, 19);
             label2.TabIndex = 9;
@@ -115,7 +117,7 @@
             comboBox3.Anchor = AnchorStyles.None;
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "Novo", "Higienizado" });
-            comboBox3.Location = new Point(471, 54);
+            comboBox3.Location = new Point(557, 80);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(121, 23);
             comboBox3.TabIndex = 10;
@@ -124,7 +126,7 @@
             // 
             button1.Anchor = AnchorStyles.None;
             button1.ForeColor = Color.FromArgb(0, 192, 0);
-            button1.Location = new Point(1047, 38);
+            button1.Location = new Point(1170, 60);
             button1.Name = "button1";
             button1.Size = new Size(97, 23);
             button1.TabIndex = 11;
@@ -136,7 +138,7 @@
             // 
             dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(221, 102);
+            dataGridView1.Location = new Point(342, 141);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(644, 275);
@@ -145,7 +147,7 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.None;
-            button2.Location = new Point(445, 383);
+            button2.Location = new Point(567, 422);
             button2.Name = "button2";
             button2.Size = new Size(176, 23);
             button2.TabIndex = 13;
@@ -158,7 +160,7 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(95, 477);
+            label4.Location = new Point(221, 497);
             label4.Name = "label4";
             label4.Size = new Size(41, 19);
             label4.TabIndex = 14;
@@ -169,7 +171,7 @@
             comboBox4.Anchor = AnchorStyles.None;
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange(new object[] { "Jaleco", "Calça", "Botina" });
-            comboBox4.Location = new Point(142, 473);
+            comboBox4.Location = new Point(273, 493);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(121, 23);
             comboBox4.TabIndex = 15;
@@ -179,7 +181,7 @@
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(306, 473);
+            label5.Location = new Point(452, 493);
             label5.Name = "label5";
             label5.Size = new Size(72, 19);
             label5.TabIndex = 16;
@@ -190,7 +192,7 @@
             comboBox5.Anchor = AnchorStyles.None;
             comboBox5.FormattingEnabled = true;
             comboBox5.Items.AddRange(new object[] { "P", "M", "G", "GG", "38", "39", "40", "41", "42", "43", "44", "45" });
-            comboBox5.Location = new Point(384, 473);
+            comboBox5.Location = new Point(530, 493);
             comboBox5.Name = "comboBox5";
             comboBox5.Size = new Size(121, 23);
             comboBox5.TabIndex = 17;
@@ -200,7 +202,7 @@
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(539, 477);
+            label6.Location = new Point(690, 493);
             label6.Name = "label6";
             label6.Size = new Size(53, 19);
             label6.TabIndex = 18;
@@ -211,7 +213,7 @@
             comboBox6.Anchor = AnchorStyles.None;
             comboBox6.FormattingEnabled = true;
             comboBox6.Items.AddRange(new object[] { "Novo", "Higienizado" });
-            comboBox6.Location = new Point(598, 477);
+            comboBox6.Location = new Point(764, 493);
             comboBox6.Name = "comboBox6";
             comboBox6.Size = new Size(121, 23);
             comboBox6.TabIndex = 19;
@@ -221,7 +223,7 @@
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(829, 58);
+            label7.Location = new Point(932, 84);
             label7.Name = "label7";
             label7.Size = new Size(89, 19);
             label7.TabIndex = 20;
@@ -230,7 +232,7 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(924, 54);
+            textBox1.Location = new Point(1027, 84);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 21;
@@ -239,7 +241,7 @@
             // button3
             // 
             button3.Anchor = AnchorStyles.None;
-            button3.Location = new Point(955, 477);
+            button3.Location = new Point(622, 549);
             button3.Name = "button3";
             button3.Size = new Size(96, 23);
             button3.TabIndex = 22;
@@ -251,7 +253,7 @@
             // 
             button4.Anchor = AnchorStyles.None;
             button4.ForeColor = Color.Red;
-            button4.Location = new Point(1047, 86);
+            button4.Location = new Point(1170, 141);
             button4.Name = "button4";
             button4.Size = new Size(97, 23);
             button4.TabIndex = 23;
@@ -264,7 +266,7 @@
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(1074, 64);
+            label8.Location = new Point(1200, 102);
             label8.Name = "label8";
             label8.Size = new Size(28, 19);
             label8.TabIndex = 24;
@@ -275,7 +277,7 @@
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(608, 58);
+            label9.Location = new Point(717, 84);
             label9.Name = "label9";
             label9.Size = new Size(68, 19);
             label9.TabIndex = 25;
@@ -286,7 +288,7 @@
             comboBox7.Anchor = AnchorStyles.None;
             comboBox7.FormattingEnabled = true;
             comboBox7.Items.AddRange(new object[] { "Jeans", "Brim", "Polo", "Social", "Padrão" });
-            comboBox7.Location = new Point(682, 54);
+            comboBox7.Location = new Point(791, 80);
             comboBox7.Name = "comboBox7";
             comboBox7.Size = new Size(121, 23);
             comboBox7.TabIndex = 26;
@@ -296,7 +298,7 @@
             label10.Anchor = AnchorStyles.None;
             label10.AutoSize = true;
             label10.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(735, 477);
+            label10.Location = new Point(932, 489);
             label10.Name = "label10";
             label10.Size = new Size(68, 19);
             label10.TabIndex = 27;
@@ -307,7 +309,7 @@
             comboBox8.Anchor = AnchorStyles.None;
             comboBox8.FormattingEnabled = true;
             comboBox8.Items.AddRange(new object[] { "Jeans", "Brim", "Polo", "Social", "Padrão" });
-            comboBox8.Location = new Point(809, 477);
+            comboBox8.Location = new Point(1006, 489);
             comboBox8.Name = "comboBox8";
             comboBox8.Size = new Size(121, 23);
             comboBox8.TabIndex = 28;
@@ -318,48 +320,59 @@
             label11.AutoSize = true;
             label11.Font = new Font("Calibri", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             label11.ForeColor = Color.DarkSlateGray;
-            label11.Location = new Point(523, -2);
+            label11.Location = new Point(590, 10);
             label11.Name = "label11";
             label11.Size = new Size(153, 33);
             label11.TabIndex = 29;
             label11.Text = "UNIFORMES";
             // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.None;
+            panel1.BackColor = SystemColors.ControlDark;
+            panel1.Controls.Add(comboBox5);
+            panel1.Controls.Add(label11);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(comboBox7);
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(comboBox8);
+            panel1.Controls.Add(comboBox4);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(comboBox6);
+            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(comboBox3);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(comboBox2);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label3);
+            panel1.Location = new Point(12, 32);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1310, 665);
+            panel1.TabIndex = 30;
+            // 
             // FormCadastrarUnifrome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1195, 748);
-            Controls.Add(label11);
-            Controls.Add(comboBox8);
-            Controls.Add(label10);
-            Controls.Add(comboBox7);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(textBox1);
-            Controls.Add(label7);
-            Controls.Add(comboBox6);
-            Controls.Add(label6);
-            Controls.Add(comboBox5);
-            Controls.Add(label5);
-            Controls.Add(comboBox4);
-            Controls.Add(label4);
-            Controls.Add(button2);
-            Controls.Add(dataGridView1);
-            Controls.Add(button1);
-            Controls.Add(comboBox3);
-            Controls.Add(label2);
-            Controls.Add(comboBox2);
-            Controls.Add(label1);
-            Controls.Add(comboBox1);
-            Controls.Add(label3);
+            ClientSize = new Size(1350, 784);
+            Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCadastrarUnifrome";
             Text = "FormCadastrarUnifrome";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -389,5 +402,6 @@
         private Label label10;
         private ComboBox comboBox8;
         private Label label11;
+        private Panel panel1;
     }
 }
