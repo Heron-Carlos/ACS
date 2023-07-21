@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarItem));
             dataGridView1 = new DataGridView();
+            Seleção = new DataGridViewCheckBoxColumn();
             label3 = new Label();
             comboBox1 = new ComboBox();
             textBox1 = new TextBox();
@@ -40,16 +41,14 @@
             label4 = new Label();
             textBox2 = new TextBox();
             button2 = new Button();
-            label5 = new Label();
-            textBox3 = new TextBox();
             label6 = new Label();
             textBox4 = new TextBox();
             label7 = new Label();
             textBox5 = new TextBox();
             button3 = new Button();
             label11 = new Label();
-            label8 = new Label();
             panel2 = new Panel();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -58,12 +57,18 @@
             // 
             dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Seleção });
             dataGridView1.Location = new Point(96, 161);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(946, 231);
+            dataGridView1.Size = new Size(946, 313);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // Seleção
+            // 
+            Seleção.HeaderText = "Seleção";
+            Seleção.Name = "Seleção";
             // 
             // label3
             // 
@@ -122,7 +127,7 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(32, 547);
+            label2.Location = new Point(51, 509);
             label2.Name = "label2";
             label2.Size = new Size(57, 19);
             label2.TabIndex = 20;
@@ -133,7 +138,7 @@
             comboBox2.Anchor = AnchorStyles.None;
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Item", "Marca", "Descrição", "Local", "Tipo", "Status" });
-            comboBox2.Location = new Point(96, 547);
+            comboBox2.Location = new Point(114, 509);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(147, 23);
             comboBox2.TabIndex = 21;
@@ -144,7 +149,7 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(326, 547);
+            label4.Location = new Point(278, 509);
             label4.Name = "label4";
             label4.Size = new Size(42, 19);
             label4.TabIndex = 22;
@@ -153,7 +158,7 @@
             // textBox2
             // 
             textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(391, 543);
+            textBox2.Location = new Point(326, 509);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(389, 23);
             textBox2.TabIndex = 23;
@@ -161,39 +166,20 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.None;
-            button2.Location = new Point(907, 543);
+            button2.Location = new Point(868, 559);
             button2.Name = "button2";
-            button2.Size = new Size(117, 23);
+            button2.Size = new Size(174, 23);
             button2.TabIndex = 24;
-            button2.Text = "Alterar";
+            button2.Text = "Alterar em grande escala";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(32, 476);
-            label5.Name = "label5";
-            label5.Size = new Size(246, 19);
-            label5.TabIndex = 25;
-            label5.Text = "Código do Item que deseja atualizar:";
-            // 
-            // textBox3
-            // 
-            textBox3.Anchor = AnchorStyles.None;
-            textBox3.Location = new Point(299, 476);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(224, 23);
-            textBox3.TabIndex = 26;
             // 
             // label6
             // 
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(674, 476);
+            label6.Location = new Point(729, 505);
             label6.Name = "label6";
             label6.Size = new Size(106, 19);
             label6.TabIndex = 27;
@@ -202,7 +188,7 @@
             // textBox4
             // 
             textBox4.Anchor = AnchorStyles.None;
-            textBox4.Location = new Point(804, 476);
+            textBox4.Location = new Point(841, 505);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(112, 23);
             textBox4.TabIndex = 28;
@@ -212,7 +198,7 @@
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(946, 476);
+            label7.Location = new Point(959, 505);
             label7.Name = "label7";
             label7.Size = new Size(18, 19);
             label7.TabIndex = 29;
@@ -221,7 +207,7 @@
             // textBox5
             // 
             textBox5.Anchor = AnchorStyles.None;
-            textBox5.Location = new Point(980, 476);
+            textBox5.Location = new Point(983, 505);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(112, 23);
             textBox5.TabIndex = 30;
@@ -229,7 +215,7 @@
             // button3
             // 
             button3.Anchor = AnchorStyles.None;
-            button3.Location = new Point(499, 407);
+            button3.Location = new Point(490, 480);
             button3.Name = "button3";
             button3.Size = new Size(152, 23);
             button3.TabIndex = 31;
@@ -249,35 +235,22 @@
             label11.TabIndex = 32;
             label11.Text = "ALTERAR ITEM";
             // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.None;
-            label8.AutoSize = true;
-            label8.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(592, 476);
-            label8.Name = "label8";
-            label8.Size = new Size(30, 19);
-            label8.TabIndex = 33;
-            label8.Text = "OU";
-            // 
             // panel2
             // 
             panel2.Anchor = AnchorStyles.None;
             panel2.BackColor = SystemColors.ControlDark;
+            panel2.Controls.Add(button4);
             panel2.Controls.Add(comboBox2);
             panel2.Controls.Add(label11);
             panel2.Controls.Add(label2);
-            panel2.Controls.Add(label8);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(comboBox1);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(label5);
             panel2.Controls.Add(textBox1);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox3);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(textBox2);
             panel2.Controls.Add(dataGridView1);
@@ -288,6 +261,16 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1102, 626);
             panel2.TabIndex = 35;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(184, 559);
+            button4.Name = "button4";
+            button4.Size = new Size(204, 23);
+            button4.TabIndex = 34;
+            button4.Text = "Alterar Itens selecionados";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // FormAlterarItem
             // 
@@ -318,15 +301,14 @@
         private Label label4;
         private TextBox textBox2;
         private Button button2;
-        private Label label5;
-        private TextBox textBox3;
         private Label label6;
         private TextBox textBox4;
         private Label label7;
         private TextBox textBox5;
         private Button button3;
         private Label label11;
-        private Label label8;
         private Panel panel2;
+        private DataGridViewCheckBoxColumn Seleção;
+        private Button button4;
     }
 }

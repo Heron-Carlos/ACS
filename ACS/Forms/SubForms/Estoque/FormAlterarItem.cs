@@ -29,6 +29,116 @@ namespace ACS.Forms.SubForms.Estoque
 
         }
 
+        private void AlterarGrandeEscala()
+        {
+            MySqlConnection Conexao;
+            string item = Convert.ToString(comboBox2.Text);
+            string sql = "";
+            if (item == "Codigo")
+            {
+                sql = " SELECT * FROM Estoque WHERE CodigoItem = '" + textBox1.Text + "' ";
+            }
+            if (item == "Marca")
+            {
+                sql = "UPDATE Estoque SET Marca = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+            }
+            if (item == "Descrição")
+            {
+                sql = "UPDATE Estoque SET Descricao = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+            }
+            if (item == "Local")
+            {
+                sql = "UPDATE Estoque SET Localizacao = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+            }
+            if (item == "Tipo")
+            {
+                sql = "UPDATE Estoque SET Tipo = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+            }
+            if (item == "Item")
+            {
+                sql = "UPDATE Estoque SET Item = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+            }
+            if (item == "Status")
+            {
+                sql = "UPDATE Estoque SET Stts = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
+            }
+            try
+            {
+
+                Conexao = new MySqlConnection(data_source);
+                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+                Conexao.Open();
+                comando.ExecuteReader();
+                MessageBox.Show("Atualização concluida");
+
+
+                Conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Certifique-se que todos os campos estão prenchidos!");
+
+            }
+            textBox2.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            comboBox2.Text = "";
+        }
+
+        private void AlterarSelecionados()
+        {
+            string item = Convert.ToString(comboBox2.Text);
+
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                bool Selecionado = Convert.ToBoolean(row.Cells["Seleção"].Value);
+                if (Selecionado)
+                {
+                    string sql = "";
+                    string codigoProduto = row.Cells["codigoItem"].Value.ToString();
+                    string localAtual = row.Cells["Localizacao"].Value.ToString();
+                    if (item == "Procedencia")
+                    {
+                        sql = "UPDATE Estoque SET Procedencia = '" + textBox2.Text + "' WHERE codigoItem = '" + codigoProduto + "'";
+                    }
+                    if (item == "Marca")
+                    {
+                        sql = "UPDATE Estoque SET Marca = '" + textBox2.Text + "' WHERE codigoItem = '" + codigoProduto + "'";
+                    }
+                    if (item == "Descrição")
+                    {
+                        sql = "UPDATE Estoque SET Descricao = '" + textBox2.Text + "' WHERE codigoItem = '" + codigoProduto + "'";
+                    }
+                    if (item == "Local")
+                    {
+                        sql = "UPDATE Estoque SET Localizacao = '" + textBox2.Text + "' WHERE codigoItem = '" + codigoProduto + "'";
+                    }
+                    if (item == "Tipo")
+                    {
+                        sql = "UPDATE Estoque SET Tipo = '" + textBox2.Text + "' WHERE codigoItem = '" + codigoProduto + "'";
+                    }
+                    if (item == "Item")
+                    {
+                        sql = "UPDATE Estoque SET Item = '" + textBox2.Text + "' WHERE codigoItem = '" + codigoProduto + "'";
+                    }
+                    if (item == "Status")
+                    {
+                        sql = "UPDATE Estoque SET Stts = '" + textBox2.Text + "' WHERE codigoItem = '" + codigoProduto + "'";
+                    }
+
+                    MySqlConnection Conexao;
+                    Conexao = new MySqlConnection(data_source);
+                    MySqlCommand comando = new MySqlCommand(sql, Conexao);
+                    Conexao.Open();
+                    comando.ExecuteReader();
+
+
+                }
+            }
+            MessageBox.Show("Atualização concluida");
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string item = Convert.ToString(comboBox1.Text);
@@ -77,7 +187,6 @@ namespace ACS.Forms.SubForms.Estoque
                         }
                         Cn.Close();
                         textBox2.Text = "";
-                        textBox3.Text = "";
                         textBox4.Text = "";
                         textBox5.Text = "";
                     }
@@ -100,128 +209,15 @@ namespace ACS.Forms.SubForms.Estoque
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
+            if (textBox2.Text != "" && textBox4.Text != "" && textBox5.Text != "" && comboBox2.Text != "")
             {
-                MessageBox.Show("Você não pode selecionar os dois tipos de código do Item!");
+                this.AlterarGrandeEscala();
             }
             else
             {
-                if (comboBox2.Text != "" && textBox2.Text != "" && textBox3.Text != "")
-                {
-                    if (textBox3.Text == "")
-                    {
-                        MySqlConnection Conexao;
-                        string item = Convert.ToString(comboBox2.Text);
-                        string sql = "";
-                        if (item == "Codigo")
-                        {
-                            sql = " SELECT * FROM Estoque WHERE CodigoItem = '" + textBox1.Text + "' ";
-                        }
-                        if (item == "Marca")
-                        {
-                            sql = "UPDATE Estoque SET Marca = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
-                        }
-                        if (item == "Descrição")
-                        {
-                            sql = "UPDATE Estoque SET Descricao = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
-                        }
-                        if (item == "Local")
-                        {
-                            sql = "UPDATE Estoque SET Localizacao = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
-                        }
-                        if (item == "Tipo")
-                        {
-                            sql = "UPDATE Estoque SET Tipo = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
-                        }
-                        if (item == "Item")
-                        {
-                            sql = "UPDATE Estoque SET Item = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
-                        }
-                        if (item == "Status")
-                        {
-                            sql = "UPDATE Estoque SET Stts = '" + textBox2.Text + "' where CodigoItem between '" + textBox4.Text + "' AND '" + textBox5.Text + "'";
-                        }
-                        try
-                        {
-
-                            Conexao = new MySqlConnection(data_source);
-                            MySqlCommand comando = new MySqlCommand(sql, Conexao);
-                            Conexao.Open();
-                            comando.ExecuteReader();
-                            MessageBox.Show("Atualização concluida");
-
-
-                            Conexao.Close();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Certifique-se que todos os campos estão prenchidos!");
-
-                        }
-                    }
-                    else
-                    {
-                        MySqlConnection Conexao;
-                        string item = Convert.ToString(comboBox2.Text);
-                        string sql = "";
-                        if (item == "Codigo")
-                        {
-                            sql = " SELECT * FROM Estoque WHERE CodigoItem = '" + textBox1.Text + "' ";
-                        }
-                        if (item == "Marca")
-                        {
-                            sql = "UPDATE Estoque SET Marca = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
-                        }
-                        if (item == "Descrição")
-                        {
-                            sql = "UPDATE Estoque SET Descricao = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
-                        }
-                        if (item == "Local")
-                        {
-                            sql = "UPDATE Estoque SET Localizacao = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
-                        }
-                        if (item == "Tipo")
-                        {
-                            sql = "UPDATE Estoque SET Tipo = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
-                        }
-                        if (item == "Item")
-                        {
-                            sql = "UPDATE Estoque SET Item = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
-                        }
-                        if (item == "Status")
-                        {
-                            sql = "UPDATE Estoque SET Stts = '" + textBox2.Text + "' where CodigoItem = '" + textBox3.Text + "'";
-                        }
-                        try
-                        {
-
-                            Conexao = new MySqlConnection(data_source);
-                            MySqlCommand comando = new MySqlCommand(sql, Conexao);
-                            Conexao.Open();
-                            comando.ExecuteReader();
-                            MessageBox.Show("Atualização concluida");
-
-
-                            Conexao.Close();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Certifique-se que todos os campos estão prenchidos!");
-
-                        }
-                    }
-                    textBox2.Text = "";
-                    textBox3.Text = "";
-                    textBox4.Text = "";
-                    textBox5.Text = "";
-                    comboBox2.Text = "";
-                }
-                else MessageBox.Show("Certifique-se que todos os campos estão prenchidos!");
+                MessageBox.Show("Certifique-se de que todos os campos estão prenchidos!");
             }
-
-
-
-
+                        
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -263,5 +259,18 @@ namespace ACS.Forms.SubForms.Estoque
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text != "" && comboBox2.Text != "")
+            {
+                this.AlterarSelecionados();
+            }
+            else
+            {
+                MessageBox.Show("Certifique-se de que todos os campos estão prenchidos!");
+            }
+        }
+
     }
 }
