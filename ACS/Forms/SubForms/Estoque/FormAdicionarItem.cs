@@ -42,9 +42,11 @@ namespace ACS.Forms.SubForms
 
         }
 
+        //Função para cadastra o Item
         private void Cadastrar()
         {
-
+            DateTime dataCadastro = DateTime.Now; // ou substitua DateTime.Now pelo valor desejado
+            string dataCadastroFormatada = dataCadastro.ToString("dd/MM/yyyy HH:mm:ss");
 
             int quant = Convert.ToInt32(textBox3.Text);
             for (int i = 0; i < quant; i++)
@@ -56,7 +58,7 @@ namespace ACS.Forms.SubForms
 
 
                     Conexao = new MySqlConnection(data_source);
-                    string sql = "INSERT INTO Estoque (CodigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade) VALUES ( null,'" + textBox1.Text + "' ,'" + textBox2.Text + "' ,'" + textBox4.Text + "','" + comboBox2.Text + "','" + textBox5.Text + "', '" + comboBox3.Text + "', '" + comboBox4.Text + "', 1)";
+                    string sql = "INSERT INTO Estoque (CodigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, dataCadastro) VALUES (null, '" + textBox1.Text + "' ,'" + textBox2.Text + "' ,'" + textBox4.Text + "','" + comboBox2.Text + "','" + textBox5.Text + "', '" + comboBox3.Text + "', '" + comboBox4.Text + "', 1, '"+dataCadastroFormatada+"')";
                     MySqlCommand comando = new MySqlCommand(sql, Conexao);
                     Conexao.Open();
                     comando.ExecuteReader();
@@ -85,6 +87,8 @@ namespace ACS.Forms.SubForms
 
         }
 
+
+        //Função para verificar todas as TextBox e comboBox necessárias para o cadastro do item
         private void button1_Click(object sender, EventArgs e)
         {
             //this.textBoxVazias();

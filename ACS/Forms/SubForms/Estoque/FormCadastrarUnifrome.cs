@@ -24,6 +24,8 @@ namespace ACS.Forms.SubForms.Estoque
             InitializeComponent();
         }
 
+
+        //Funçao para verificar TextBox vazias
         private bool textBoxVazias()
         {
             foreach (Control c in this.Controls)
@@ -124,6 +126,8 @@ namespace ACS.Forms.SubForms.Estoque
             }
         }
 
+
+        //Função para dar baixa em um uniforme 
         private void button4_Click(object sender, EventArgs e)
         {
             if ((comboBox1.Text != "") && (comboBox2.Text != "") && (comboBox3.Text != "") && (comboBox7.Text != ""))

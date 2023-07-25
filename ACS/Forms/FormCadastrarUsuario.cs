@@ -19,8 +19,12 @@ namespace ACS.Forms
             InitializeComponent();
         }
 
+
+        //Função para criar um novo usuário
         private void AdicionarUsuario()
         {
+
+            //Condição para criar usuário padrão
             if (comboBox2.Text != "Usuário Padrão")
             {
                 try
@@ -40,6 +44,8 @@ namespace ACS.Forms
 
                 }
             }
+
+            //Condição para criar usuário admin
             else
             {
                 try
@@ -62,6 +68,8 @@ namespace ACS.Forms
 
         }
 
+
+        //Função para pesquisar pelos usuários no banco
         private void Pesquisar()
         {
             try
@@ -87,6 +95,8 @@ namespace ACS.Forms
             }
         }
 
+
+        //Função para alterar nome de usuário
         private void AlterarUsuario()
         {
             if (textBox3.Text != "")
@@ -114,6 +124,7 @@ namespace ACS.Forms
 
         }
 
+        //Função para alterar senha de usuário
         private void AlterarSenha()
         {
             if (textBox3.Text != "")
@@ -140,6 +151,7 @@ namespace ACS.Forms
             }
         }
 
+        //Função para alterar Tipo de usuário(padrão ou admin)
         private void AlterarTipo()
         {
             if (comboBox1.Text != "Usuário Padrão")
@@ -194,6 +206,8 @@ namespace ACS.Forms
             }
         }
 
+
+        //Função para excluir o usuário
         private void ExcluirUsuario()
         {
             if (textBox3.Text != "")

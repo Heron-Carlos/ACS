@@ -22,6 +22,17 @@ namespace ACS.Forms.SubForms.Estoque
             InitializeComponent();
         }
 
+        //Função para retornar quantidade de itens retornados das consultas
+        private void AtualizarLabelQuantidadeItens()
+        {
+            // Obter a quantidade de itens encontrados no DataGridView
+            int quantidadeItens = dataGridView1.RowCount - 1;
+
+            // Atualizar a label com a quantidade de itens encontrados
+            label8.Text = quantidadeItens.ToString();
+        }
+
+        //Função para carregar DataGridView com estoque completo
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -29,7 +40,7 @@ namespace ACS.Forms.SubForms.Estoque
                 MySqlConnection Cn;
                 Cn = new MySqlConnection(data_source);
                 Cn.Open();
-                var exibirVagas = "SELECT * FROM Estoque ";
+                var exibirVagas = "SELECT codigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, datacadastro FROM Estoque ";
                 using (MySqlDataAdapter da = new MySqlDataAdapter(exibirVagas, Cn))
                 {
                     using (DataTable dt = new DataTable())
@@ -38,6 +49,7 @@ namespace ACS.Forms.SubForms.Estoque
                         dataGridView1.DataSource = dt;
                     }
                 }
+
                 Cn.Close();
             }
             catch (Exception)
@@ -45,8 +57,13 @@ namespace ACS.Forms.SubForms.Estoque
 
                 throw;
             }
+
+            this.AtualizarLabelQuantidadeItens();
+
         }
 
+
+        //Função para pesquisa detalhada
         private void button2_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
@@ -59,31 +76,31 @@ namespace ACS.Forms.SubForms.Estoque
                         var sqlComand = "";
                         if (item == "Codigo")
                         {
-                            sqlComand = " SELECT * FROM Estoque WHERE CodigoItem = '" + textBox1.Text + "' ";
+                            sqlComand = " SELECT codigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, datacadastro FROM Estoque WHERE CodigoItem = '" + textBox1.Text + "' ";
                         }
                         if (item == "Marca")
                         {
-                            sqlComand = "SELECT * FROM Estoque WHERE Marca = '" + textBox1.Text + "'";
+                            sqlComand = "SELECT codigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, datacadastro FROM Estoque WHERE Marca = '" + textBox1.Text + "'";
                         }
                         if (item == "Descrição")
                         {
-                            sqlComand = "SELECT * FROM Estoque WHERE Descricao = '" + textBox1.Text + "'";
+                            sqlComand = "SELECT codigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, datacadastro FROM Estoque WHERE Descricao = '" + textBox1.Text + "'";
                         }
                         if (item == "Local")
                         {
-                            sqlComand = "SELECT * FROM Estoque WHERE Localizacao = '" + textBox1.Text + "'";
+                            sqlComand = "SELECT codigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, datacadastro FROM Estoque WHERE Localizacao = '" + textBox1.Text + "'";
                         }
                         if (item == "Tipo")
                         {
-                            sqlComand = "SELECT * FROM Estoque WHERE Tipo = '" + textBox1.Text + "'";
+                            sqlComand = "SELECT codigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, datacadastro FROM Estoque WHERE Tipo = '" + textBox1.Text + "'";
                         }
                         if (item == "Item")
                         {
-                            sqlComand = "SELECT * FROM Estoque WHERE Item = '" + textBox1.Text + "'";
+                            sqlComand = "SELECT codigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, datacadastro FROM Estoque WHERE Item = '" + textBox1.Text + "'";
                         }
                         if (item == "Procedencia")
                         {
-                            sqlComand = "SELECT * FROM Estoque WHERE Procedencia = '" + textBox1.Text + "'";
+                            sqlComand = "SELECT codigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, datacadastro FROM Estoque WHERE Procedencia = '" + textBox1.Text + "'";
                         }
                         MySqlConnection Cn;
                         Cn = new MySqlConnection(data_source);
@@ -113,9 +130,10 @@ namespace ACS.Forms.SubForms.Estoque
             else MessageBox.Show("Complete os espaços para fazer a pesquisa detalhada!");
 
 
-
+            this.AtualizarLabelQuantidadeItens();
         }
 
+        //Função para Pesquisa precisa
         private void button4_Click(object sender, EventArgs e)
         {
             try
@@ -123,7 +141,7 @@ namespace ACS.Forms.SubForms.Estoque
                 MySqlConnection Cn;
                 Cn = new MySqlConnection(data_source);
                 Cn.Open();
-                var exibirVagas = "SELECT * FROM Estoque Where Tipo = '" + comboBox1.Text + "' AND Localizacao = '" + textBox2.Text + "' AND STTS = '" + comboBox3.Text + "' AND Procedencia = '" + comboBox4.Text + "' ";
+                var exibirVagas = "SELECT codigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, datacadastro FROM Estoque Where Tipo = '" + comboBox1.Text + "' AND Localizacao = '" + textBox2.Text + "' AND STTS = '" + comboBox3.Text + "' AND Procedencia = '" + comboBox4.Text + "' ";
                 using (MySqlDataAdapter da = new MySqlDataAdapter(exibirVagas, Cn))
                 {
                     using (DataTable dt = new DataTable())
@@ -139,6 +157,7 @@ namespace ACS.Forms.SubForms.Estoque
 
                 throw;
             }
+            this.AtualizarLabelQuantidadeItens();
         }
     }
 }

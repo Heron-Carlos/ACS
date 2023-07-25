@@ -17,7 +17,7 @@ namespace ACS
     {
         string data_source = "server=localhost;database=acs;uid=root;pwd=heron362;port=3306";
 
-
+        //Verificação de ADMIN para liberar e ocultar ferramentas de acordo com a permissão
         private void VerificacaoAdmin()
         {
             string select = "SELECT admin from login where usuario = '" + label2.Text + "'";
@@ -77,6 +77,8 @@ namespace ACS
         {
             this.VerificacaoAdmin();
         }
+
+        //Função para abrir as telas de acordo com o botão clicado
         private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)

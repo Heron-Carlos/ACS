@@ -49,6 +49,8 @@
             label11 = new Label();
             panel2 = new Panel();
             button4 = new Button();
+            label8 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -239,6 +241,8 @@
             // 
             panel2.Anchor = AnchorStyles.None;
             panel2.BackColor = SystemColors.ControlDark;
+            panel2.Controls.Add(label8);
+            panel2.Controls.Add(label5);
             panel2.Controls.Add(button4);
             panel2.Controls.Add(comboBox2);
             panel2.Controls.Add(label11);
@@ -271,6 +275,29 @@
             button4.Text = "Alterar Itens selecionados";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.None;
+            label8.AutoSize = true;
+            label8.Font = new Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.DarkSlateGray;
+            label8.Location = new Point(989, 46);
+            label8.Name = "label8";
+            label8.Size = new Size(49, 29);
+            label8.TabIndex = 36;
+            label8.Text = "......";
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.None;
+            label5.AutoSize = true;
+            label5.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(841, 54);
+            label5.Name = "label5";
+            label5.Size = new Size(149, 19);
+            label5.TabIndex = 35;
+            label5.Text = "Quantidade de itens: ";
             // 
             // FormAlterarItem
             // 
@@ -310,5 +337,7 @@
         private Panel panel2;
         private DataGridViewCheckBoxColumn Seleção;
         private Button button4;
+        private Label label8;
+        private Label label5;
     }
 }

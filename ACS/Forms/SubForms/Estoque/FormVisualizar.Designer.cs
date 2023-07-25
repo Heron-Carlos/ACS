@@ -46,6 +46,8 @@
             button4 = new Button();
             comboBox2 = new ComboBox();
             panel1 = new Panel();
+            label8 = new Label();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -220,6 +222,8 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = SystemColors.ControlDark;
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label7);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(button2);
@@ -240,6 +244,29 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1086, 602);
             panel1.TabIndex = 24;
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.None;
+            label8.AutoSize = true;
+            label8.Font = new Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.DarkSlateGray;
+            label8.Location = new Point(942, 33);
+            label8.Name = "label8";
+            label8.Size = new Size(49, 29);
+            label8.TabIndex = 25;
+            label8.Text = "......";
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.None;
+            label7.AutoSize = true;
+            label7.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(794, 41);
+            label7.Name = "label7";
+            label7.Size = new Size(149, 19);
+            label7.TabIndex = 24;
+            label7.Text = "Quantidade de itens: ";
             // 
             // FormVisualizar
             // 
@@ -275,5 +302,7 @@
         private Button button4;
         private ComboBox comboBox2;
         private Panel panel1;
+        private Label label8;
+        private Label label7;
     }
 }

@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
             panelMenu = new Panel();
             button7 = new Button();
+            label2 = new Label();
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
@@ -42,7 +43,6 @@
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             button8 = new Button();
-            label2 = new Label();
             label1 = new Label();
             imageList1 = new ImageList(components);
             panel2 = new Panel();
@@ -85,6 +85,18 @@
             button7.Text = "Cadastrar Usuário";
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(958, 45);
+            label2.Name = "label2";
+            label2.Size = new Size(102, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Heron Carlos";
             // 
             // button6
             // 
@@ -232,18 +244,6 @@
             button8.Size = new Size(50, 65);
             button8.TabIndex = 3;
             button8.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(953, 46);
-            label2.Name = "label2";
-            label2.Size = new Size(102, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Heron Carlos";
             // 
             // label1
             // 

@@ -48,6 +48,7 @@ namespace ACS.Forms
             con.Close();
         }
 
+        //Carregar itens em obra
         private void ItemObra()
         {
             string strConexao = "server=localhost;database=acs;uid=root;pwd=heron362;port=3306"; 
@@ -76,6 +77,7 @@ namespace ACS.Forms
         }
 
 
+        //Carregar itens fora de obra
         private void ItemForaObra()
         {
             string strConexao = "server=localhost;database=acs;uid=root;pwd=heron362;port=3306";
@@ -104,6 +106,7 @@ namespace ACS.Forms
             con.Close();
         }
 
+        //Carregar quantidade de máquinas cadastradas no estoque
         private void Maquina()
         {
             string strConexao = "server=localhost;database=acs;uid=root;pwd=heron362;port=3306";
@@ -132,6 +135,7 @@ namespace ACS.Forms
             con.Close();
         }
 
+        //Carregar quantidade de ferramentas cadastradas no estoque
         private void Ferramentas()
         {
             string strConexao = "server=localhost;database=acs;uid=root;pwd=heron362;port=3306";
@@ -160,6 +164,7 @@ namespace ACS.Forms
             con.Close();
         }
 
+        //Carregar quantidade de domesticos cadastradas no estoque
         private void Domesticos()
         {
             string strConexao = "server=localhost;database=acs;uid=root;pwd=heron362;port=3306";
@@ -188,6 +193,7 @@ namespace ACS.Forms
             con.Close();
         }
 
+        //Carregar quantidade de itens de escritório cadastrados no estoque
         private void Escritorio()
         {
             string strConexao = "server=localhost;database=acs;uid=root;pwd=heron362;port=3306";
@@ -216,6 +222,7 @@ namespace ACS.Forms
             con.Close();
         }
 
+        //Carregar quantidade de itens comprados
         private void Comprado()
         {
             string strConexao = "server=localhost;database=acs;uid=root;pwd=heron362;port=3306";
@@ -244,6 +251,7 @@ namespace ACS.Forms
             con.Close();
         }
 
+        //Carregar quantidade de itens alugados
         private void Alugado()
         {
             string strConexao = "server=localhost;database=acs;uid=root;pwd=heron362;port=3306";
@@ -281,6 +289,7 @@ namespace ACS.Forms
             OpenChildForm(new Forms.SubForms.FormAdicionarItem(), sender);
         }
 
+        //Função para abrir as telas 
         private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
