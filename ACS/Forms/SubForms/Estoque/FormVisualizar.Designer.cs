@@ -80,7 +80,7 @@
             button1.Location = new Point(483, 417);
             button1.Name = "button1";
             button1.Size = new Size(161, 23);
-            button1.TabIndex = 8;
+            button1.TabIndex = 4;
             button1.Text = "Visualizar todo estoque";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -102,7 +102,7 @@
             textBox1.Location = new Point(373, 96);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(479, 23);
-            textBox1.TabIndex = 10;
+            textBox1.TabIndex = 2;
             // 
             // button2
             // 
@@ -110,7 +110,7 @@
             button2.Location = new Point(880, 95);
             button2.Name = "button2";
             button2.Size = new Size(90, 23);
-            button2.TabIndex = 11;
+            button2.TabIndex = 3;
             button2.Text = "Pesquisar";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -134,7 +134,7 @@
             comboBox1.Location = new Point(110, 470);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 13;
+            comboBox1.TabIndex = 5;
             // 
             // label4
             // 
@@ -166,7 +166,7 @@
             comboBox3.Location = new Point(650, 470);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(121, 23);
-            comboBox3.TabIndex = 17;
+            comboBox3.TabIndex = 7;
             // 
             // label6
             // 
@@ -187,7 +187,7 @@
             comboBox4.Location = new Point(896, 470);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(121, 23);
-            comboBox4.TabIndex = 19;
+            comboBox4.TabIndex = 8;
             // 
             // textBox2
             // 
@@ -195,7 +195,7 @@
             textBox2.Location = new Point(354, 470);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(156, 23);
-            textBox2.TabIndex = 21;
+            textBox2.TabIndex = 6;
             // 
             // button4
             // 
@@ -203,7 +203,7 @@
             button4.Location = new Point(503, 526);
             button4.Name = "button4";
             button4.Size = new Size(161, 23);
-            button4.TabIndex = 22;
+            button4.TabIndex = 9;
             button4.Text = "Pesquisar :";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
@@ -216,7 +216,7 @@
             comboBox2.Location = new Point(211, 96);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 23;
+            comboBox2.TabIndex = 1;
             // 
             // panel1
             // 

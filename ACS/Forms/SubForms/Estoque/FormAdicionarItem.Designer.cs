@@ -92,7 +92,7 @@
             textBox2.Location = new Point(143, 227);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(414, 23);
-            textBox2.TabIndex = 5;
+            textBox2.TabIndex = 2;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label4
@@ -112,7 +112,7 @@
             textBox3.Location = new Point(855, 173);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(81, 23);
-            textBox3.TabIndex = 7;
+            textBox3.TabIndex = 5;
             textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label5
@@ -132,7 +132,7 @@
             textBox4.Location = new Point(143, 286);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(414, 23);
-            textBox4.TabIndex = 9;
+            textBox4.TabIndex = 3;
             textBox4.TextChanged += textBox4_TextChanged;
             // 
             // label6
@@ -163,7 +163,7 @@
             textBox5.Location = new Point(143, 349);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(414, 23);
-            textBox5.TabIndex = 13;
+            textBox5.TabIndex = 4;
             textBox5.TextChanged += textBox5_TextChanged;
             // 
             // label8
@@ -194,7 +194,7 @@
             button1.Location = new Point(483, 460);
             button1.Name = "button1";
             button1.Size = new Size(117, 23);
-            button1.TabIndex = 18;
+            button1.TabIndex = 1;
             button1.Text = "Cadastrar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -207,7 +207,7 @@
             comboBox2.Location = new Point(815, 227);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 20;
+            comboBox2.TabIndex = 6;
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // comboBox3
@@ -218,7 +218,7 @@
             comboBox3.Location = new Point(815, 286);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(121, 23);
-            comboBox3.TabIndex = 21;
+            comboBox3.TabIndex = 7;
             comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // comboBox4
@@ -229,7 +229,7 @@
             comboBox4.Location = new Point(815, 345);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(121, 23);
-            comboBox4.TabIndex = 22;
+            comboBox4.TabIndex = 8;
             comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
             // 
             // label10
@@ -248,7 +248,7 @@
             textBox1.Location = new Point(143, 173);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(229, 23);
-            textBox1.TabIndex = 24;
+            textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label11

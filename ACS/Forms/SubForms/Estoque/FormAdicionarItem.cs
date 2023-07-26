@@ -58,7 +58,7 @@ namespace ACS.Forms.SubForms
 
 
                     Conexao = new MySqlConnection(data_source);
-                    string sql = "INSERT INTO Estoque (CodigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, dataCadastro) VALUES (null, '" + textBox1.Text + "' ,'" + textBox2.Text + "' ,'" + textBox4.Text + "','" + comboBox2.Text + "','" + textBox5.Text + "', '" + comboBox3.Text + "', '" + comboBox4.Text + "', 1, '"+dataCadastroFormatada+"')";
+                    string sql = "INSERT INTO Estoque (CodigoItem, Item, Descricao, Marca, Tipo, Localizacao, Stts, Procedencia, Quantidade, dataCadastro) VALUES (null, '" + textBox1.Text + "' ,'" + textBox2.Text + "' ,'" + textBox4.Text + "','" + comboBox2.Text + "','" + textBox5.Text + "', '" + comboBox3.Text + "', '" + comboBox4.Text + "', 1, '" + dataCadastroFormatada + "')";
                     MySqlCommand comando = new MySqlCommand(sql, Conexao);
                     Conexao.Open();
                     comando.ExecuteReader();
@@ -97,7 +97,7 @@ namespace ACS.Forms.SubForms
             //{
             //    this.Cadastrar();
             //}
-            if (textBox1.Text != "" && textBox2.Text !="" && textBox3.Text !="" && textBox4.Text != "" && textBox5.Text != "" && comboBox2.Text !="" && comboBox3.Text !="" && comboBox4.Text != "")
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && comboBox2.Text != "" && comboBox3.Text != "" && comboBox4.Text != "")
             {
                 this.Cadastrar();
             }

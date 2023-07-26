@@ -78,7 +78,7 @@
             comboBox1.Location = new Point(88, 80);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 6;
+            comboBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -99,7 +99,7 @@
             comboBox2.Location = new Point(322, 80);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 8;
+            comboBox2.TabIndex = 2;
             // 
             // label2
             // 
@@ -120,7 +120,7 @@
             comboBox3.Location = new Point(557, 80);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(121, 23);
-            comboBox3.TabIndex = 10;
+            comboBox3.TabIndex = 3;
             // 
             // button1
             // 
@@ -129,7 +129,7 @@
             button1.Location = new Point(1170, 60);
             button1.Name = "button1";
             button1.Size = new Size(97, 23);
-            button1.TabIndex = 11;
+            button1.TabIndex = 6;
             button1.Text = "Cadastrar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -150,7 +150,7 @@
             button2.Location = new Point(567, 422);
             button2.Name = "button2";
             button2.Size = new Size(176, 23);
-            button2.TabIndex = 13;
+            button2.TabIndex = 8;
             button2.Text = "Visualizar todo estoque";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -174,7 +174,7 @@
             comboBox4.Location = new Point(273, 493);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(121, 23);
-            comboBox4.TabIndex = 15;
+            comboBox4.TabIndex = 9;
             // 
             // label5
             // 
@@ -195,7 +195,7 @@
             comboBox5.Location = new Point(530, 493);
             comboBox5.Name = "comboBox5";
             comboBox5.Size = new Size(121, 23);
-            comboBox5.TabIndex = 17;
+            comboBox5.TabIndex = 10;
             // 
             // label6
             // 
@@ -216,7 +216,7 @@
             comboBox6.Location = new Point(764, 493);
             comboBox6.Name = "comboBox6";
             comboBox6.Size = new Size(121, 23);
-            comboBox6.TabIndex = 19;
+            comboBox6.TabIndex = 11;
             // 
             // label7
             // 
@@ -235,7 +235,7 @@
             textBox1.Location = new Point(1027, 84);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 21;
+            textBox1.TabIndex = 5;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button3
@@ -244,8 +244,8 @@
             button3.Location = new Point(622, 549);
             button3.Name = "button3";
             button3.Size = new Size(96, 23);
-            button3.TabIndex = 22;
-            button3.Text = "Pesquisar:";
+            button3.TabIndex = 13;
+            button3.Text = "Pesquisar";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -256,7 +256,7 @@
             button4.Location = new Point(1170, 141);
             button4.Name = "button4";
             button4.Size = new Size(97, 23);
-            button4.TabIndex = 23;
+            button4.TabIndex = 7;
             button4.Text = "Excluir";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
@@ -291,7 +291,7 @@
             comboBox7.Location = new Point(791, 80);
             comboBox7.Name = "comboBox7";
             comboBox7.Size = new Size(121, 23);
-            comboBox7.TabIndex = 26;
+            comboBox7.TabIndex = 4;
             // 
             // label10
             // 
@@ -312,7 +312,7 @@
             comboBox8.Location = new Point(1006, 489);
             comboBox8.Name = "comboBox8";
             comboBox8.Size = new Size(121, 23);
-            comboBox8.TabIndex = 28;
+            comboBox8.TabIndex = 12;
             // 
             // label11
             // 

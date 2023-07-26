@@ -48,9 +48,9 @@
             button3 = new Button();
             label11 = new Label();
             panel2 = new Panel();
-            button4 = new Button();
             label8 = new Label();
             label5 = new Label();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -91,7 +91,7 @@
             comboBox1.Location = new Point(221, 132);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(147, 23);
-            comboBox1.TabIndex = 6;
+            comboBox1.TabIndex = 1;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // textBox1
@@ -100,7 +100,7 @@
             textBox1.Location = new Point(477, 132);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(389, 23);
-            textBox1.TabIndex = 7;
+            textBox1.TabIndex = 2;
             // 
             // label1
             // 
@@ -119,7 +119,7 @@
             button1.Location = new Point(907, 132);
             button1.Name = "button1";
             button1.Size = new Size(117, 23);
-            button1.TabIndex = 19;
+            button1.TabIndex = 3;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -143,7 +143,7 @@
             comboBox2.Location = new Point(114, 509);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(147, 23);
-            comboBox2.TabIndex = 21;
+            comboBox2.TabIndex = 5;
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // label4
@@ -163,7 +163,7 @@
             textBox2.Location = new Point(326, 509);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(389, 23);
-            textBox2.TabIndex = 23;
+            textBox2.TabIndex = 6;
             // 
             // button2
             // 
@@ -171,7 +171,7 @@
             button2.Location = new Point(868, 559);
             button2.Name = "button2";
             button2.Size = new Size(174, 23);
-            button2.TabIndex = 24;
+            button2.TabIndex = 10;
             button2.Text = "Alterar em grande escala";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -193,7 +193,7 @@
             textBox4.Location = new Point(841, 505);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(112, 23);
-            textBox4.TabIndex = 28;
+            textBox4.TabIndex = 8;
             // 
             // label7
             // 
@@ -212,7 +212,7 @@
             textBox5.Location = new Point(983, 505);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(112, 23);
-            textBox5.TabIndex = 30;
+            textBox5.TabIndex = 9;
             // 
             // button3
             // 
@@ -220,7 +220,7 @@
             button3.Location = new Point(490, 480);
             button3.Name = "button3";
             button3.Size = new Size(152, 23);
-            button3.TabIndex = 31;
+            button3.TabIndex = 4;
             button3.Text = "Exibir todos os Itens";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
@@ -266,16 +266,6 @@
             panel2.Size = new Size(1102, 626);
             panel2.TabIndex = 35;
             // 
-            // button4
-            // 
-            button4.Location = new Point(184, 559);
-            button4.Name = "button4";
-            button4.Size = new Size(204, 23);
-            button4.TabIndex = 34;
-            button4.Text = "Alterar Itens selecionados";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
             // label8
             // 
             label8.Anchor = AnchorStyles.None;
@@ -298,6 +288,16 @@
             label5.Size = new Size(149, 19);
             label5.TabIndex = 35;
             label5.Text = "Quantidade de itens: ";
+            // 
+            // button4
+            // 
+            button4.Location = new Point(184, 559);
+            button4.Name = "button4";
+            button4.Size = new Size(204, 23);
+            button4.TabIndex = 7;
+            button4.Text = "Alterar Itens selecionados";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // FormAlterarItem
             // 
